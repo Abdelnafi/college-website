@@ -1,0 +1,121 @@
+تسجيل الدخول
+
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>تسجيل الدخول</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><header class="main-header"><div class="logos">
+
+    <img
+        src="university-logo.png"
+        alt="شعار الجامعة"
+        class="university-logo"
+    >
+
+    <img
+        src="college-logo.png"
+        alt="شعار الكلية"
+        class="college-logo"
+    >
+
+</div>
+
+<h1>جامعة القرآن الكريم وتأصيل العلوم</h1>
+
+<h2>كلية علوم الحاسوب وتقانة المعلومات</h2>
+
+</header><nav><a href="index.html">الرئيسية</a>
+<a href="about.html">عن الكلية</a>
+<a href="departments.html">الأقسام</a>
+<a href="programs.html">البرامج الأكاديمية</a>
+<a href="teachers.html">أعضاء هيئة التدريس</a>
+<a href="students.html">الطلاب</a>
+<a href="news.html">الأخبار والإعلانات</a>
+<a href="contact.html">اتصل بنا</a>
+
+</nav><main class="container"><section class="about"><h2>🔐 تسجيل الدخول</h2>
+
+<p>
+    الدخول إلى بوابة الطالب الإلكترونية.
+</p>
+
+
+<form onsubmit="login(event)">
+
+    <label for="studentId">
+        الرقم الجامعي
+    </label>
+
+    <input
+        type="text"
+        id="studentId"
+        placeholder="أدخل الرقم الجامعي"
+        required
+    >
+
+
+    <label for="password">
+        كلمة المرور
+    </label>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="أدخل كلمة المرور"
+        required
+    >
+
+
+    <button type="submit">
+        تسجيل الدخول
+    </button>
+
+
+    <p id="loginMessage"></p>
+
+</form>
+
+</section><section class="about"><h2>تنبيه أمني 🔒</h2>
+
+<p>
+    هذه الصفحة حالياً واجهة تجريبية فقط.
+    لا تدخل بيانات حقيقية أو كلمات مرور
+    شخصية فيها قبل ربط الموقع بنظام خادم
+    وقاعدة بيانات آمنة.
+</p>
+
+</section><section class="about"><a
+    href="students.html"
+    class="hero-button"
+>
+    ⬅ العودة إلى خدمات الطلاب
+</a>
+
+</section></main><footer><h3>
+    كلية علوم الحاسوب وتقانة المعلومات
+</h3>
+
+<p>
+    جامعة القرآن الكريم وتأصيل العلوم
+</p>
+
+<p>
+    جميع الحقوق محفوظة © 2026
+</p>
+
+</footer><script>
+
+function login(event) {
+
+    event.preventDefault();
+
+    const message = document.getElementById("loginMessage");
+
+    message.textContent =
+        "نظام تسجيل الدخول لم يتم ربطه بقاعدة بيانات بعد.";
+
+}
+
+</script></body></html>
