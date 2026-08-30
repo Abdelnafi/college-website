@@ -3,573 +3,599 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>كلية علوم الحاسوب وتقانة المعلومات</title>
+<title>كلية علوم الحاسوب وتقانة المعلومات</title>
 
-    <meta name="description"
-          content="الموقع الإلكتروني لكلية علوم الحاسوب وتقانة المعلومات بجامعة القرآن الكريم وتأصيل العلوم.">
+<meta name="description"
+content="الموقع الإلكتروني لكلية علوم الحاسوب وتقانة المعلومات بجامعة القرآن الكريم وتأصيل العلوم.">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <style>
+<style>
 
-        /* =========================
-           الصفحة الرئيسية
-        ========================= */
+/* =========================
+   الصفحة الرئيسية
+========================= */
 
-        .home {
+.home {
+    background: #f5f7f6;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
 
-            background: #f4f7f6;
-            min-height: 100vh;
-            padding-bottom: 50px;
 
-        }
+/* =========================
+   الواجهة الرئيسية
+========================= */
 
+.home-hero {
 
-        /* =========================
-           الواجهة الرئيسية
-        ========================= */
+    min-height: 570px;
 
-        .home-hero {
+    position: relative;
 
-            min-height: 520px;
+    display: flex;
 
-            background:
-                linear-gradient(
-                    rgba(3, 55, 43, 0.82),
-                    rgba(15, 118, 110, 0.78)
-                ),
-                url("college.jpg") center/cover no-repeat;
+    align-items: center;
 
-            display: flex;
+    justify-content: center;
 
-            align-items: center;
+    text-align: center;
 
-            justify-content: center;
+    color: white;
 
-            text-align: center;
+    padding: 40px 20px;
 
-            color: white;
+    background-image:
+        linear-gradient(
+            rgba(0, 55, 43, 0.48),
+            rgba(0, 55, 43, 0.48)
+        ),
+        url("college.jpg");
 
-            padding: 40px 20px;
+    background-size: cover;
 
-        }
+    background-position: center;
 
+    background-repeat: no-repeat;
+}
 
-        .hero-content {
 
-            max-width: 850px;
+/* محتوى الواجهة */
 
-        }
+.hero-content {
 
+    width: min(850px, 95%);
 
-        .hero-content .welcome {
+    position: relative;
 
-            font-size: 18px;
+    z-index: 2;
 
-            margin-bottom: 12px;
+}
 
-            opacity: 0.95;
 
-        }
+/* الترحيب */
 
+.hero-welcome {
 
-        .hero-content h1 {
+    font-size: 20px;
 
-            font-size: 45px;
+    font-weight: bold;
 
-            line-height: 1.5;
+    margin-bottom: 15px;
 
-            margin: 0 0 18px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 
-        }
+}
 
 
-        .hero-content p {
+/* العنوان */
 
-            font-size: 19px;
+.hero-content h1 {
 
-            line-height: 1.9;
+    font-size: 44px;
 
-            margin: 0 auto 28px;
+    line-height: 1.55;
 
-            max-width: 700px;
+    margin: 0 0 18px;
 
-        }
+    color: white;
 
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.65);
 
-        .hero-buttons {
+}
 
-            display: flex;
 
-            justify-content: center;
+/* الوصف */
 
-            gap: 12px;
+.hero-content p {
 
-            flex-wrap: wrap;
+    max-width: 700px;
 
-        }
+    margin: 0 auto 30px;
 
+    font-size: 20px;
 
-        .hero-button {
+    line-height: 2;
 
-            display: inline-block;
+    color: white;
 
-            text-decoration: none;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.7);
 
-            background: #0f766e;
+}
 
-            color: white;
 
-            padding: 12px 22px;
+/* الأزرار */
 
-            border-radius: 9px;
+.hero-buttons {
 
-            font-weight: bold;
+    display: flex;
 
-            transition: 0.3s;
+    justify-content: center;
 
-        }
+    align-items: center;
 
+    gap: 15px;
 
-        .hero-button:hover {
+    flex-wrap: wrap;
 
-            background: #064e3b;
+}
 
-            transform: translateY(-2px);
 
-        }
+.home-button {
 
+    display: inline-block;
 
-        .hero-button.light {
+    text-decoration: none;
 
-            background: white;
+    padding: 14px 28px;
 
-            color: #064e3b;
+    border-radius: 12px;
 
-        }
+    font-weight: bold;
 
+    font-size: 17px;
 
-        .hero-button.light:hover {
+    transition: 0.3s;
 
-            background: #e6fffa;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
 
-        }
+}
 
 
-        /* =========================
-           الحاوية
-        ========================= */
+.home-button:hover {
 
-        .home-container {
+    transform: translateY(-3px);
 
-            width: min(1100px, 92%);
+}
 
-            margin: auto;
 
-        }
+.button-white {
 
+    background: white;
 
-        /* =========================
-           الترحيب
-        ========================= */
+    color: #064e3b;
 
-        .welcome-section {
+}
 
-            background: white;
 
-            margin-top: 30px;
+.button-green {
 
-            padding: 35px;
+    background: #0f766e;
 
-            border-radius: 20px;
+    color: white;
 
-            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
 
-            text-align: center;
 
-        }
+/* =========================
+   الحاوية
+========================= */
 
+.home-container {
 
-        .welcome-section h2 {
+    width: min(1100px, 92%);
 
-            color: #064e3b;
+    margin: auto;
 
-            font-size: 28px;
+}
 
-            margin-top: 0;
 
-        }
+/* =========================
+   الترحيب
+========================= */
 
+.welcome-section {
 
-        .welcome-section p {
+    background: white;
 
-            color: #555;
+    margin-top: 30px;
 
-            line-height: 2;
+    padding: 35px;
 
-            font-size: 17px;
+    border-radius: 20px;
 
-        }
+    text-align: center;
 
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 
-        /* =========================
-           العناوين
-        ========================= */
+}
 
-        .section-title {
 
-            text-align: center;
+.welcome-section h2 {
 
-            margin: 45px 0 25px;
+    color: #064e3b;
 
-        }
+    font-size: 30px;
 
+    margin-top: 0;
 
-        .section-title h2 {
+}
 
-            color: #064e3b;
 
-            font-size: 28px;
+.welcome-section p {
 
-            margin-bottom: 8px;
+    color: #555;
 
-        }
+    line-height: 2;
 
+    font-size: 17px;
 
-        .section-title p {
+}
 
-            color: #777;
 
-        }
+/* =========================
+   عناوين الأقسام
+========================= */
 
+.section-title {
 
-        /* =========================
-           البطاقات
-        ========================= */
+    text-align: center;
 
-        .home-cards {
+    margin: 45px 0 25px;
 
-            display: grid;
+}
 
-            grid-template-columns:
-                repeat(3, 1fr);
 
-            gap: 20px;
+.section-title h2 {
 
-        }
+    color: #064e3b;
 
+    font-size: 29px;
 
-        .home-card {
+    margin-bottom: 8px;
 
-            background: white;
+}
 
-            padding: 28px 22px;
 
-            border-radius: 18px;
+.section-title p {
 
-            text-align: center;
+    color: #777;
 
-            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
 
-            transition: 0.3s;
 
-        }
+/* =========================
+   بطاقات الأقسام
+========================= */
 
+.home-cards {
 
-        .home-card:hover {
+    display: grid;
 
-            transform: translateY(-5px);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.11);
+    gap: 20px;
 
-        }
+}
 
 
-        .home-icon {
+.home-card {
 
-            font-size: 45px;
+    background: white;
 
-            margin-bottom: 10px;
+    padding: 28px 22px;
 
-        }
+    border-radius: 18px;
 
+    text-align: center;
 
-        .home-card h3 {
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 
-            color: #064e3b;
+    transition: 0.3s;
 
-            font-size: 21px;
+}
 
-        }
 
+.home-card:hover {
 
-        .home-card p {
+    transform: translateY(-5px);
 
-            color: #666;
+}
 
-            line-height: 1.8;
 
-        }
+.home-icon {
 
+    font-size: 48px;
 
-        /* =========================
-           الخدمات
-        ========================= */
+}
 
-        .services-grid {
 
-            display: grid;
+.home-card h3 {
 
-            grid-template-columns:
-                repeat(4, 1fr);
+    color: #064e3b;
 
-            gap: 15px;
+    font-size: 22px;
 
-        }
+}
 
 
-        .service {
+.home-card p {
 
-            background: white;
+    color: #666;
 
-            padding: 22px 12px;
+    line-height: 1.8;
 
-            border-radius: 15px;
+}
 
-            text-align: center;
 
-            text-decoration: none;
+/* =========================
+   الخدمات
+========================= */
 
-            color: #064e3b;
+.services-grid {
 
-            font-weight: bold;
+    display: grid;
 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    grid-template-columns:
+        repeat(4, 1fr);
 
-            transition: 0.3s;
+    gap: 15px;
 
-        }
+}
 
 
-        .service:hover {
+.service {
 
-            transform: translateY(-3px);
+    background: white;
 
-            background: #e6fffa;
+    padding: 22px 12px;
 
-        }
+    border-radius: 15px;
 
+    text-align: center;
 
-        .service-icon {
+    text-decoration: none;
 
-            display: block;
+    color: #064e3b;
 
-            font-size: 32px;
+    font-weight: bold;
 
-            margin-bottom: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
 
-        }
+    transition: 0.3s;
 
+}
 
-        /* =========================
-           الأخبار
-        ========================= */
 
-        .home-news {
+.service:hover {
 
-            background: white;
+    transform: translateY(-4px);
 
-            border-radius: 18px;
+    background: #e6fffa;
 
-            padding: 28px;
+}
 
-            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 
-        }
+.service-icon {
 
+    display: block;
 
-        .news-item {
+    font-size: 34px;
 
-            border-right: 4px solid #0f766e;
+    margin-bottom: 8px;
 
-            background: #f8faf9;
+}
 
-            padding: 18px;
 
-            margin-bottom: 15px;
+/* =========================
+   الأخبار
+========================= */
 
-            border-radius: 8px;
+.home-news {
 
-        }
+    background: white;
 
+    padding: 28px;
 
-        .news-item:last-child {
+    border-radius: 18px;
 
-            margin-bottom: 0;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 
-        }
+}
 
 
-        .news-item h3 {
+.news-item {
 
-            color: #064e3b;
+    background: #f7faf9;
 
-            margin-top: 0;
+    border-right: 4px solid #0f766e;
 
-        }
+    padding: 18px;
 
+    margin-bottom: 15px;
 
-        .news-item p {
+    border-radius: 8px;
 
-            color: #666;
+}
 
-            line-height: 1.8;
 
-        }
+.news-item h3 {
 
+    color: #064e3b;
 
-        .news-more {
+    margin-top: 0;
 
-            text-align: center;
+}
 
-            margin-top: 22px;
 
-        }
+.news-item p {
 
+    color: #666;
 
-        /* =========================
-           بوابة الطالب
-        ========================= */
+    line-height: 1.8;
 
-        .student-box {
+}
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #064e3b,
-                    #0f766e
-                );
 
-            color: white;
+/* =========================
+   بوابة الطالب
+========================= */
 
-            border-radius: 20px;
+.student-box {
 
-            padding: 40px 25px;
+    margin-top: 40px;
 
-            text-align: center;
+    padding: 45px 25px;
 
-            margin-top: 40px;
+    border-radius: 20px;
 
-        }
+    text-align: center;
 
+    color: white;
 
-        .student-box h2 {
+    background:
+        linear-gradient(
+            135deg,
+            #064e3b,
+            #0f766e
+        );
 
-            font-size: 29px;
+}
 
-            margin-top: 0;
 
-        }
+.student-box h2 {
 
+    font-size: 30px;
 
-        .student-box p {
+    margin-top: 0;
 
-            line-height: 1.9;
+}
 
-            font-size: 17px;
 
-            margin-bottom: 25px;
+.student-box p {
 
-        }
+    font-size: 17px;
 
+    line-height: 1.9;
 
-        /* =========================
-           الهاتف
-        ========================= */
+}
 
-        @media (max-width: 800px) {
 
-            .hero-content h1 {
+/* =========================
+   الهاتف
+========================= */
 
-                font-size: 34px;
+@media (max-width: 800px) {
 
-            }
+    .home-cards {
 
+        grid-template-columns: 1fr;
 
-            .hero-content p {
+    }
 
-                font-size: 16px;
+    .services-grid {
 
-            }
+        grid-template-columns:
+            repeat(2, 1fr);
 
+    }
 
-            .home-cards {
+    .hero-content h1 {
 
-                grid-template-columns: 1fr;
+        font-size: 34px;
 
-            }
+    }
 
+}
 
-            .services-grid {
 
-                grid-template-columns:
-                    repeat(2, 1fr);
+@media (max-width: 600px) {
 
-            }
+    .home-hero {
 
-        }
+        min-height: 500px;
 
+        padding: 30px 15px;
 
-        @media (max-width: 500px) {
+        background-position: center center;
 
-            .home-hero {
+    }
 
-                min-height: 460px;
+    .hero-welcome {
 
-            }
+        font-size: 16px;
 
+    }
 
-            .hero-content h1 {
+    .hero-content h1 {
 
-                font-size: 27px;
+        font-size: 29px;
 
-            }
+        line-height: 1.6;
 
+    }
 
-            .hero-content .welcome {
+    .hero-content p {
 
-                font-size: 15px;
+        font-size: 16px;
 
-            }
+        line-height: 1.9;
 
+    }
 
-            .welcome-section {
+    .home-button {
 
-                padding: 25px 18px;
+        width: 85%;
 
-            }
+        padding: 13px 15px;
 
+    }
 
-            .services-grid {
+    .welcome-section {
 
-                grid-template-columns: 1fr 1fr;
+        padding: 25px 18px;
 
-            }
+    }
 
+    .section-title h2 {
 
-            .section-title h2 {
+        font-size: 25px;
 
-                font-size: 24px;
+    }
 
-            }
+}
 
-        }
 
-    </style>
+/* =========================
+   منع الصور من الخروج
+========================= */
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+
+</style>
 
 </head>
 
@@ -599,11 +625,9 @@
 
     </div>
 
-
     <h1>
         جامعة القرآن الكريم وتأصيل العلوم
     </h1>
-
 
     <h2>
         كلية علوم الحاسوب وتقانة المعلومات
@@ -637,33 +661,36 @@
 </nav>
 
 
-<main class="home">
-
-
 <!-- =========================
-     الواجهة الرئيسية
+     الواجهة
 ========================= -->
 
 <section class="home-hero">
 
     <div class="hero-content">
 
-        <div class="welcome">
-            أهلاً بكم في الموقع الإلكتروني للكلية
+        <div class="hero-welcome">
+
+            🎓 أهلاً بكم في الموقع الإلكتروني للكلية
+
         </div>
 
 
         <h1>
+
             كلية علوم الحاسوب
             <br>
             وتقانة المعلومات
+
         </h1>
 
 
         <p>
+
             نحو تعليم تقني متميز،
             وبناء جيل قادر على الإبداع
             وصناعة مستقبل التكنولوجيا.
+
         </p>
 
 
@@ -671,17 +698,21 @@
 
             <a
                 href="about.html"
-                class="hero-button light"
+                class="home-button button-white"
             >
+
                 🏛️ تعرف على الكلية
+
             </a>
 
 
             <a
                 href="students.html"
-                class="hero-button"
+                class="home-button button-green"
             >
+
                 🎓 بوابة الطالب
+
             </a>
 
         </div>
@@ -690,6 +721,8 @@
 
 </section>
 
+
+<main class="home">
 
 <div class="home-container">
 
@@ -701,22 +734,27 @@
 <section class="welcome-section">
 
     <h2>
+
         مرحباً بكم 👋
+
     </h2>
 
 
     <p>
+
         نرحب بكم في الموقع الإلكتروني لكلية
         علوم الحاسوب وتقانة المعلومات بجامعة
         القرآن الكريم وتأصيل العلوم.
+
     </p>
 
 
     <p>
+
         نسعى إلى توفير بيئة أكاديمية متميزة
         تساعد الطلاب على اكتساب المعرفة
-        والمهارات التقنية في مجالات الحاسوب
-        وتقانة المعلومات.
+        والمهارات التقنية الحديثة.
+
     </p>
 
 </section>
@@ -735,7 +773,7 @@
         </h2>
 
         <p>
-            تعرف على المجالات والتخصصات التقنية
+            تعرف على المجالات والتخصصات
         </p>
 
     </div>
@@ -755,15 +793,19 @@
             </h3>
 
             <p>
+
                 البرمجة والخوارزميات وهندسة
                 البرمجيات وقواعد البيانات.
+
             </p>
 
             <a
                 href="computer-science.html"
-                class="hero-button"
+                class="home-button button-green"
             >
-                التفاصيل
+
+                تفاصيل القسم
+
             </a>
 
         </div>
@@ -780,15 +822,19 @@
             </h3>
 
             <p>
+
                 الشبكات ونظم المعلومات
                 وإدارة الأنظمة والتقنيات الرقمية.
+
             </p>
 
             <a
                 href="information-technology.html"
-                class="hero-button"
+                class="home-button button-green"
             >
-                التفاصيل
+
+                تفاصيل القسم
+
             </a>
 
         </div>
@@ -805,15 +851,19 @@
             </h3>
 
             <p>
+
                 الذكاء الاصطناعي وتحليل البيانات
-                والحوسبة والتقنيات الناشئة.
+                والتقنيات والتطبيقات الحديثة.
+
             </p>
 
             <a
                 href="modern-technologies.html"
-                class="hero-button"
+                class="home-button button-green"
             >
-                التفاصيل
+
+                تفاصيل القسم
+
             </a>
 
         </div>
@@ -846,10 +896,7 @@
     <div class="services-grid">
 
 
-        <a
-            href="students.html"
-            class="service"
-        >
+        <a href="students.html" class="service">
 
             <span class="service-icon">
                 🎓
@@ -860,10 +907,7 @@
         </a>
 
 
-        <a
-            href="programs.html"
-            class="service"
-        >
+        <a href="programs.html" class="service">
 
             <span class="service-icon">
                 📚
@@ -874,24 +918,18 @@
         </a>
 
 
-        <a
-            href="teachers.html"
-            class="service"
-        >
+        <a href="teachers.html" class="service">
 
             <span class="service-icon">
                 👨‍🏫
             </span>
 
-            هيئة التدريس
+            أعضاء هيئة التدريس
 
         </a>
 
 
-        <a
-            href="news.html"
-            class="service"
-        >
+        <a href="news.html" class="service">
 
             <span class="service-icon">
                 📢
@@ -936,8 +974,10 @@
             </h3>
 
             <p>
+
                 ترحب كلية علوم الحاسوب وتقانة
                 المعلومات بجميع الطلاب والزوار.
+
             </p>
 
         </div>
@@ -950,20 +990,24 @@
             </h3>
 
             <p>
+
                 يرجى متابعة صفحة الأخبار والإعلانات
                 لمعرفة آخر المستجدات الأكاديمية.
+
             </p>
 
         </div>
 
 
-        <div class="news-more">
+        <div style="text-align:center; margin-top:22px;">
 
             <a
                 href="news.html"
-                class="hero-button"
+                class="home-button button-green"
             >
+
                 مشاهدة جميع الأخبار
+
             </a>
 
         </div>
@@ -986,16 +1030,20 @@
 
 
     <p>
+
         الوصول إلى الخدمات الطلابية والجداول
         والنتائج والإعلانات والمعلومات الأكاديمية.
+
     </p>
 
 
     <a
         href="students.html"
-        class="hero-button light"
+        class="home-button button-white"
     >
+
         الدخول إلى بوابة الطالب
+
     </a>
 
 </section>
@@ -1020,13 +1068,15 @@
     </div>
 
 
-    <div style="text-align:center; margin-bottom:20px;">
+    <div style="text-align:center;">
 
         <a
             href="contact.html"
-            class="hero-button"
+            class="home-button button-green"
         >
+
             تواصل معنا
+
         </a>
 
     </div>
@@ -1035,7 +1085,6 @@
 
 
 </div>
-
 
 </main>
 
@@ -1050,11 +1099,9 @@
         كلية علوم الحاسوب وتقانة المعلومات
     </h3>
 
-
     <p>
         جامعة القرآن الكريم وتأصيل العلوم
     </p>
-
 
     <p>
         جميع الحقوق محفوظة © 2026
@@ -1065,4 +1112,4 @@
 
 </body>
 
-    </html>
+            </html>
