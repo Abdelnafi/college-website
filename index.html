@@ -7,47 +7,569 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        كلية علوم الحاسوب وتقانة المعلومات | جامعة القرآن الكريم وتأصيل العلوم
-    </title>
+    <title>كلية علوم الحاسوب وتقانة المعلومات</title>
 
     <meta name="description"
-          content="الموقع الرسمي لكلية علوم الحاسوب وتقانة المعلومات بجامعة القرآن الكريم وتأصيل العلوم. أخبار الكلية، الأقسام، البرامج الأكاديمية، أعضاء هيئة التدريس وخدمات الطلاب.">
-
-    <meta name="keywords"
-          content="كلية علوم الحاسوب, تقانة المعلومات, جامعة القرآن الكريم وتأصيل العلوم, علوم الحاسوب, السودان, مدني, رفاعة">
-
-    <meta name="author"
-          content="كلية علوم الحاسوب وتقانة المعلومات">
-
-    <meta name="robots"
-          content="index, follow">
-
-    <link rel="canonical"
-          href="https://abdelnafi.github.io/college-website/">
-
-    <!-- Open Graph -->
-
-    <meta property="og:title"
-          content="كلية علوم الحاسوب وتقانة المعلومات">
-
-    <meta property="og:description"
           content="الموقع الإلكتروني لكلية علوم الحاسوب وتقانة المعلومات بجامعة القرآن الكريم وتأصيل العلوم.">
 
-    <meta property="og:type"
-          content="website">
+    <link rel="stylesheet" href="style.css">
 
-    <meta property="og:url"
-          content="https://abdelnafi.github.io/college-website/">
+    <style>
 
-    <meta property="og:image"
-          content="https://abdelnafi.github.io/college-website/college.jpg">
+        /* =========================
+           الصفحة الرئيسية
+        ========================= */
 
-    <meta property="og:locale"
-          content="ar_AR">
+        .home {
 
-    <link rel="stylesheet"
-          href="style.css">
+            background: #f4f7f6;
+            min-height: 100vh;
+            padding-bottom: 50px;
+
+        }
+
+
+        /* =========================
+           الواجهة الرئيسية
+        ========================= */
+
+        .home-hero {
+
+            min-height: 520px;
+
+            background:
+                linear-gradient(
+                    rgba(3, 55, 43, 0.82),
+                    rgba(15, 118, 110, 0.78)
+                ),
+                url("college.jpg") center/cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 40px 20px;
+
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+        }
+
+
+        .hero-content .welcome {
+
+            font-size: 18px;
+
+            margin-bottom: 12px;
+
+            opacity: 0.95;
+
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 45px;
+
+            line-height: 1.5;
+
+            margin: 0 0 18px;
+
+        }
+
+
+        .hero-content p {
+
+            font-size: 19px;
+
+            line-height: 1.9;
+
+            margin: 0 auto 28px;
+
+            max-width: 700px;
+
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .hero-button {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #0f766e;
+
+            color: white;
+
+            padding: 12px 22px;
+
+            border-radius: 9px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+
+        .hero-button:hover {
+
+            background: #064e3b;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .hero-button.light {
+
+            background: white;
+
+            color: #064e3b;
+
+        }
+
+
+        .hero-button.light:hover {
+
+            background: #e6fffa;
+
+        }
+
+
+        /* =========================
+           الحاوية
+        ========================= */
+
+        .home-container {
+
+            width: min(1100px, 92%);
+
+            margin: auto;
+
+        }
+
+
+        /* =========================
+           الترحيب
+        ========================= */
+
+        .welcome-section {
+
+            background: white;
+
+            margin-top: 30px;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+
+            text-align: center;
+
+        }
+
+
+        .welcome-section h2 {
+
+            color: #064e3b;
+
+            font-size: 28px;
+
+            margin-top: 0;
+
+        }
+
+
+        .welcome-section p {
+
+            color: #555;
+
+            line-height: 2;
+
+            font-size: 17px;
+
+        }
+
+
+        /* =========================
+           العناوين
+        ========================= */
+
+        .section-title {
+
+            text-align: center;
+
+            margin: 45px 0 25px;
+
+        }
+
+
+        .section-title h2 {
+
+            color: #064e3b;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .section-title p {
+
+            color: #777;
+
+        }
+
+
+        /* =========================
+           البطاقات
+        ========================= */
+
+        .home-cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .home-card {
+
+            background: white;
+
+            padding: 28px 22px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+
+        }
+
+
+        .home-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.11);
+
+        }
+
+
+        .home-icon {
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .home-card h3 {
+
+            color: #064e3b;
+
+            font-size: 21px;
+
+        }
+
+
+        .home-card p {
+
+            color: #666;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================
+           الخدمات
+        ========================= */
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+        }
+
+
+        .service {
+
+            background: white;
+
+            padding: 22px 12px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            color: #064e3b;
+
+            font-weight: bold;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+
+        }
+
+
+        .service:hover {
+
+            transform: translateY(-3px);
+
+            background: #e6fffa;
+
+        }
+
+
+        .service-icon {
+
+            display: block;
+
+            font-size: 32px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        /* =========================
+           الأخبار
+        ========================= */
+
+        .home-news {
+
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 28px;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+
+        }
+
+
+        .news-item {
+
+            border-right: 4px solid #0f766e;
+
+            background: #f8faf9;
+
+            padding: 18px;
+
+            margin-bottom: 15px;
+
+            border-radius: 8px;
+
+        }
+
+
+        .news-item:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+
+        .news-item h3 {
+
+            color: #064e3b;
+
+            margin-top: 0;
+
+        }
+
+
+        .news-item p {
+
+            color: #666;
+
+            line-height: 1.8;
+
+        }
+
+
+        .news-more {
+
+            text-align: center;
+
+            margin-top: 22px;
+
+        }
+
+
+        /* =========================
+           بوابة الطالب
+        ========================= */
+
+        .student-box {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #064e3b,
+                    #0f766e
+                );
+
+            color: white;
+
+            border-radius: 20px;
+
+            padding: 40px 25px;
+
+            text-align: center;
+
+            margin-top: 40px;
+
+        }
+
+
+        .student-box h2 {
+
+            font-size: 29px;
+
+            margin-top: 0;
+
+        }
+
+
+        .student-box p {
+
+            line-height: 1.9;
+
+            font-size: 17px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* =========================
+           الهاتف
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .hero-content h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .hero-content p {
+
+                font-size: 16px;
+
+            }
+
+
+            .home-cards {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .home-hero {
+
+                min-height: 460px;
+
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 27px;
+
+            }
+
+
+            .hero-content .welcome {
+
+                font-size: 15px;
+
+            }
+
+
+            .welcome-section {
+
+                padding: 25px 18px;
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size: 24px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -55,17 +577,25 @@
 <body>
 
 
+<!-- =========================
+     رأس الموقع
+========================= -->
+
 <header class="main-header">
 
     <div class="logos">
 
-        <img src="university-logo.png"
-             alt="شعار جامعة القرآن الكريم وتأصيل العلوم"
-             class="university-logo">
+        <img
+            src="university-logo.png"
+            alt="شعار جامعة القرآن الكريم وتأصيل العلوم"
+            class="university-logo"
+        >
 
-        <img src="college-logo.png"
-             alt="شعار كلية علوم الحاسوب وتقانة المعلومات"
-             class="college-logo">
+        <img
+            src="college-logo.png"
+            alt="شعار كلية علوم الحاسوب وتقانة المعلومات"
+            class="college-logo"
+        >
 
     </div>
 
@@ -82,239 +612,208 @@
 </header>
 
 
+<!-- =========================
+     القائمة
+========================= -->
+
 <nav>
 
-    <a href="index.html">
-        الرئيسية
-    </a>
+    <a href="index.html">الرئيسية</a>
 
-    <a href="about.html">
-        عن الكلية
-    </a>
+    <a href="about.html">عن الكلية</a>
 
-    <a href="departments.html">
-        الأقسام
-    </a>
+    <a href="departments.html">الأقسام</a>
 
-    <a href="programs.html">
-        البرامج الأكاديمية
-    </a>
+    <a href="programs.html">البرامج الأكاديمية</a>
 
-    <a href="teachers.html">
-        أعضاء هيئة التدريس
-    </a>
+    <a href="teachers.html">أعضاء هيئة التدريس</a>
 
-    <a href="students.html">
-        الطلاب
-    </a>
+    <a href="students.html">الطلاب</a>
 
-    <a href="news.html">
-        الأخبار والإعلانات
-    </a>
+    <a href="news.html">الأخبار والإعلانات</a>
 
-    <a href="contact.html">
-        اتصل بنا
-    </a>
+    <a href="contact.html">اتصل بنا</a>
 
 </nav>
 
 
-<section class="hero">
+<main class="home">
 
-    <div class="hero-image">
 
-        <img src="college.jpg"
-             alt="مبنى كلية علوم الحاسوب وتقانة المعلومات"
-             loading="eager">
+<!-- =========================
+     الواجهة الرئيسية
+========================= -->
 
-    </div>
-
+<section class="home-hero">
 
     <div class="hero-content">
 
+        <div class="welcome">
+            أهلاً بكم في الموقع الإلكتروني للكلية
+        </div>
+
+
         <h1>
-            كلية علوم الحاسوب<br>
+            كلية علوم الحاسوب
+            <br>
             وتقانة المعلومات
         </h1>
 
 
         <p>
-            نحو تعليم تقني متميز وإعداد كوادر قادرة على صناعة المستقبل
+            نحو تعليم تقني متميز،
+            وبناء جيل قادر على الإبداع
+            وصناعة مستقبل التكنولوجيا.
         </p>
 
 
-        <a href="about.html"
-           class="hero-button">
+        <div class="hero-buttons">
 
-            تعرف على الكلية
+            <a
+                href="about.html"
+                class="hero-button light"
+            >
+                🏛️ تعرف على الكلية
+            </a>
 
-        </a>
+
+            <a
+                href="students.html"
+                class="hero-button"
+            >
+                🎓 بوابة الطالب
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<main class="container">
+<div class="home-container">
 
 
-<section class="about">
+<!-- =========================
+     الترحيب
+========================= -->
+
+<section class="welcome-section">
 
     <h2>
-        مرحباً بكم
+        مرحباً بكم 👋
     </h2>
 
 
     <p>
-        مرحباً بكم في الموقع الإلكتروني لكلية
+        نرحب بكم في الموقع الإلكتروني لكلية
         علوم الحاسوب وتقانة المعلومات بجامعة
         القرآن الكريم وتأصيل العلوم.
     </p>
 
 
     <p>
-        نسعى إلى تقديم تعليم أكاديمي متميز في
-        مجالات علوم الحاسوب وتقنية المعلومات،
-        وتأهيل الطلاب بالمعارف والمهارات الحديثة.
+        نسعى إلى توفير بيئة أكاديمية متميزة
+        تساعد الطلاب على اكتساب المعرفة
+        والمهارات التقنية في مجالات الحاسوب
+        وتقانة المعلومات.
     </p>
 
 </section>
 
 
+<!-- =========================
+     الأقسام
+========================= -->
 
-<section class="student-services">
+<section>
 
-    <h2>
-        روابط سريعة
-    </h2>
+    <div class="section-title">
 
+        <h2>
+            💻 أقسام الكلية
+        </h2>
 
-    <div class="services">
-
-        <a href="students.html">
-            <button>
-                🎓 خدمات الطلاب
-            </button>
-        </a>
-
-
-        <a href="programs.html">
-            <button>
-                📚 البرامج الأكاديمية
-            </button>
-        </a>
-
-
-        <a href="teachers.html">
-            <button>
-                👨‍🏫 أعضاء هيئة التدريس
-            </button>
-        </a>
-
-
-        <a href="news.html">
-            <button>
-                📢 الأخبار والإعلانات
-            </button>
-        </a>
+        <p>
+            تعرف على المجالات والتخصصات التقنية
+        </p>
 
     </div>
 
-</section>
+
+    <div class="home-cards">
 
 
+        <div class="home-card">
 
-<section class="departments">
-
-    <h2>
-        أقسام الكلية
-    </h2>
-
-
-    <div class="cards">
-
-
-        <div class="card">
-
-            <div class="card-icon">
+            <div class="home-icon">
                 💻
             </div>
-
 
             <h3>
                 علوم الحاسوب
             </h3>
-
 
             <p>
                 البرمجة والخوارزميات وهندسة
                 البرمجيات وقواعد البيانات.
             </p>
 
-
-            <a href="computer-science.html"
-               class="hero-button">
-
-                تفاصيل القسم
-
+            <a
+                href="computer-science.html"
+                class="hero-button"
+            >
+                التفاصيل
             </a>
 
         </div>
 
 
+        <div class="home-card">
 
-        <div class="card">
-
-            <div class="card-icon">
+            <div class="home-icon">
                 🌐
             </div>
-
 
             <h3>
                 تقانة المعلومات
             </h3>
 
-
             <p>
-                الشبكات ونظم المعلومات وإدارة
-                التقنية والتقنيات الرقمية.
+                الشبكات ونظم المعلومات
+                وإدارة الأنظمة والتقنيات الرقمية.
             </p>
 
-
-            <a href="information-technology.html"
-               class="hero-button">
-
-                تفاصيل القسم
-
+            <a
+                href="information-technology.html"
+                class="hero-button"
+            >
+                التفاصيل
             </a>
 
         </div>
 
 
+        <div class="home-card">
 
-        <div class="card">
-
-            <div class="card-icon">
+            <div class="home-icon">
                 🤖
             </div>
-
 
             <h3>
                 التقنيات الحديثة
             </h3>
 
-
             <p>
                 الذكاء الاصطناعي وتحليل البيانات
-                والتقنيات الرقمية الحديثة.
+                والحوسبة والتقنيات الناشئة.
             </p>
 
-
-            <a href="modern-technologies.html"
-               class="hero-button">
-
-                تفاصيل القسم
-
+            <a
+                href="modern-technologies.html"
+                class="hero-button"
+            >
+                التفاصيل
             </a>
 
         </div>
@@ -325,32 +824,209 @@
 </section>
 
 
+<!-- =========================
+     الخدمات
+========================= -->
 
-<section class="news">
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            ⚡ خدمات سريعة
+        </h2>
+
+        <p>
+            الوصول السريع إلى أهم صفحات الموقع
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <a
+            href="students.html"
+            class="service"
+        >
+
+            <span class="service-icon">
+                🎓
+            </span>
+
+            خدمات الطلاب
+
+        </a>
+
+
+        <a
+            href="programs.html"
+            class="service"
+        >
+
+            <span class="service-icon">
+                📚
+            </span>
+
+            البرامج الأكاديمية
+
+        </a>
+
+
+        <a
+            href="teachers.html"
+            class="service"
+        >
+
+            <span class="service-icon">
+                👨‍🏫
+            </span>
+
+            هيئة التدريس
+
+        </a>
+
+
+        <a
+            href="news.html"
+            class="service"
+        >
+
+            <span class="service-icon">
+                📢
+            </span>
+
+            الأخبار والإعلانات
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     الأخبار
+========================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            📰 آخر الأخبار والإعلانات
+        </h2>
+
+        <p>
+            تابع آخر المستجدات الخاصة بالكلية
+        </p>
+
+    </div>
+
+
+    <div class="home-news">
+
+
+        <div class="news-item">
+
+            <h3>
+                📢 مرحباً بكم في الموقع الإلكتروني
+            </h3>
+
+            <p>
+                ترحب كلية علوم الحاسوب وتقانة
+                المعلومات بجميع الطلاب والزوار.
+            </p>
+
+        </div>
+
+
+        <div class="news-item">
+
+            <h3>
+                🔔 متابعة الإعلانات الأكاديمية
+            </h3>
+
+            <p>
+                يرجى متابعة صفحة الأخبار والإعلانات
+                لمعرفة آخر المستجدات الأكاديمية.
+            </p>
+
+        </div>
+
+
+        <div class="news-more">
+
+            <a
+                href="news.html"
+                class="hero-button"
+            >
+                مشاهدة جميع الأخبار
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     بوابة الطالب
+========================= -->
+
+<section class="student-box">
 
     <h2>
-        آخر الأخبار والإعلانات
+        🎓 بوابة الطالب الإلكترونية
     </h2>
 
 
-    <div class="news-box">
+    <p>
+        الوصول إلى الخدمات الطلابية والجداول
+        والنتائج والإعلانات والمعلومات الأكاديمية.
+    </p>
 
-        <h3>
-            📢 إعلان مهم
-        </h3>
 
+    <a
+        href="students.html"
+        class="hero-button light"
+    >
+        الدخول إلى بوابة الطالب
+    </a>
+
+</section>
+
+
+<!-- =========================
+     التواصل
+========================= -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            📞 هل لديك استفسار؟
+        </h2>
 
         <p>
-            سيتم نشر الإعلانات الرسمية الخاصة
-            بالكلية والطلاب في هذه الصفحة.
+            يسعدنا استقبال استفساراتكم ومقترحاتكم
         </p>
 
+    </div>
 
-        <a href="news.html"
-           class="hero-button">
 
-            مشاهدة كل الأخبار
+    <div style="text-align:center; margin-bottom:20px;">
 
+        <a
+            href="contact.html"
+            class="hero-button"
+        >
+            تواصل معنا
         </a>
 
     </div>
@@ -358,34 +1034,15 @@
 </section>
 
 
-
-<section class="about">
-
-    <h2>
-        بوابة الطالب
-    </h2>
-
-
-    <p>
-        يمكن للطلاب الوصول إلى الخدمات الأكاديمية
-        والإعلانات والجداول والنتائج من خلال صفحة
-        خدمات الطلاب.
-    </p>
-
-
-    <a href="student-dashboard.html"
-       class="hero-button">
-
-        الدخول إلى لوحة الطالب
-
-    </a>
-
-</section>
+</div>
 
 
 </main>
 
 
+<!-- =========================
+     التذييل
+========================= -->
 
 <footer>
 
@@ -408,4 +1065,4 @@
 
 </body>
 
-</html>
+    </html>
