@@ -2,15 +2,257 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>لوحة الطالب</title>
+    <title>لوحة الطالب | كلية علوم الحاسوب وتقانة المعلومات</title>
+
+    <meta name="description"
+          content="لوحة الطالب الإلكترونية بكلية علوم الحاسوب وتقانة المعلومات.">
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           لوحة الطالب
+        ========================= */
+
+        .student-dashboard {
+            background: #f4f7f6;
+            min-height: 100vh;
+            padding: 30px 0 50px;
+        }
+
+        .dashboard-container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        /* الترحيب */
+
+        .welcome-box {
+            background: linear-gradient(135deg, #064e3b, #0f766e);
+            color: white;
+            padding: 35px;
+            border-radius: 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .welcome-box h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        .welcome-box p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* الإحصائيات */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 22px;
+            border-radius: 17px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .stat-icon {
+            font-size: 32px;
+        }
+
+        .stat-card h3 {
+            margin: 8px 0;
+            color: #064e3b;
+            font-size: 18px;
+        }
+
+        .stat-card p {
+            margin: 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* الخدمات */
+
+        .dashboard-section {
+            background: white;
+            padding: 28px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .dashboard-section h2 {
+            color: #064e3b;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            border: 1px solid #e4e9e7;
+            border-radius: 16px;
+            padding: 22px;
+            transition: 0.3s;
+            background: #fbfdfc;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.09);
+        }
+
+        .service-icon {
+            font-size: 38px;
+            margin-bottom: 8px;
+        }
+
+        .service-card h3 {
+            margin: 5px 0 8px;
+            color: #064e3b;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            min-height: 45px;
+        }
+
+        .service-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: #0f766e;
+            color: white;
+            padding: 9px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .service-link:hover {
+            background: #064e3b;
+        }
+
+        /* قسم المعلومات */
+
+        .info-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .info-item {
+            background: #f5f8f7;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .info-item strong {
+            color: #064e3b;
+        }
+
+        /* التنبيه */
+
+        .notice {
+            background: #f0fdfa;
+            border-right: 5px solid #0f766e;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .notice strong {
+            color: #064e3b;
+        }
+
+        /* الموبايل */
+
+        @media (max-width: 850px) {
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dashboard-services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .student-dashboard {
+                padding-top: 20px;
+            }
+
+            .dashboard-container {
+                width: 94%;
+            }
+
+            .welcome-box {
+                padding: 25px 20px;
+                border-radius: 17px;
+            }
+
+            .welcome-box h1 {
+                font-size: 24px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .stat-card {
+                padding: 16px 8px;
+            }
+
+            .stat-icon {
+                font-size: 27px;
+            }
+
+            .stat-card h3 {
+                font-size: 15px;
+            }
+
+            .dashboard-section {
+                padding: 20px 15px;
+            }
+
+            .dashboard-services {
+                grid-template-columns: 1fr;
+            }
+
+            .info-list {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
+
 
 <header class="main-header">
 
@@ -18,21 +260,25 @@
 
         <img
             src="university-logo.png"
-            alt="شعار الجامعة"
+            alt="شعار جامعة القرآن الكريم وتأصيل العلوم"
             class="university-logo"
         >
 
         <img
             src="college-logo.png"
-            alt="شعار الكلية"
+            alt="شعار كلية علوم الحاسوب وتقانة المعلومات"
             class="college-logo"
         >
 
     </div>
 
-    <h1>جامعة القرآن الكريم وتأصيل العلوم</h1>
+    <h1>
+        جامعة القرآن الكريم وتأصيل العلوم
+    </h1>
 
-    <h2>كلية علوم الحاسوب وتقانة المعلومات</h2>
+    <h2>
+        كلية علوم الحاسوب وتقانة المعلومات
+    </h2>
 
 </header>
 
@@ -40,179 +286,363 @@
 <nav>
 
     <a href="index.html">الرئيسية</a>
+
     <a href="about.html">عن الكلية</a>
+
     <a href="departments.html">الأقسام</a>
+
     <a href="programs.html">البرامج الأكاديمية</a>
+
     <a href="teachers.html">أعضاء هيئة التدريس</a>
+
     <a href="students.html">الطلاب</a>
+
     <a href="news.html">الأخبار والإعلانات</a>
+
     <a href="contact.html">اتصل بنا</a>
 
 </nav>
 
 
-<main class="container">
+<main class="student-dashboard">
 
 
-<section class="about">
-
-    <h2>🎓 لوحة الطالب</h2>
-
-    <p>
-        مرحباً بك في بوابة الطالب الإلكترونية.
-    </p>
-
-</section>
+<div class="dashboard-container">
 
 
-<section class="departments">
+    <!-- الترحيب -->
 
-    <h2>الخدمات الطلابية</h2>
+    <section class="welcome-box">
 
-    <div class="cards">
+        <h1>
+            🎓 لوحة الطالب
+        </h1>
+
+        <p>
+            مرحباً بك في البوابة الإلكترونية
+            لكلية علوم الحاسوب وتقانة المعلومات
+        </p>
+
+    </section>
 
 
-        <div class="card">
+    <!-- الإحصائيات -->
 
-            <div class="card-icon">📅</div>
+    <section class="stats">
 
-            <h3>الجدول الدراسي</h3>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                🎓
+            </div>
+
+            <h3>
+                القسم
+            </h3>
 
             <p>
-                الاطلاع على المحاضرات والجدول الدراسي.
+                علوم الحاسوب وتقانة المعلومات
             </p>
-
-            <a href="schedule.html" class="hero-button">
-                عرض الجدول
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="stat-card">
 
-            <div class="card-icon">📝</div>
+            <div class="stat-icon">
+                📚
+            </div>
 
-            <h3>الامتحانات</h3>
+            <h3>
+                المقررات
+            </h3>
 
             <p>
-                الاطلاع على مواعيد الامتحانات.
+                حسب الخطة الدراسية
             </p>
-
-            <a href="schedule.html" class="hero-button">
-                عرض الامتحانات
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="stat-card">
 
-            <div class="card-icon">📊</div>
+            <div class="stat-icon">
+                📊
+            </div>
 
-            <h3>النتائج</h3>
+            <h3>
+                النتائج
+            </h3>
 
             <p>
-                الاطلاع على النتائج الأكاديمية
-                عند توفر البيانات الرسمية.
+                عند توفرها رسمياً
             </p>
-
-            <a href="results.html" class="hero-button">
-                عرض النتائج
-            </a>
 
         </div>
 
 
-        <div class="card">
+        <div class="stat-card">
 
-            <div class="card-icon">📚</div>
+            <div class="stat-icon">
+                📢
+            </div>
 
-            <h3>المقررات</h3>
+            <h3>
+                الإعلانات
+            </h3>
 
             <p>
-                الاطلاع على المقررات والبرامج
-                الأكاديمية.
+                آخر أخبار الكلية
             </p>
-
-            <a href="programs.html" class="hero-button">
-                عرض المقررات
-            </a>
 
         </div>
 
 
-        <div class="card">
+    </section>
 
-            <div class="card-icon">📢</div>
 
-            <h3>الإعلانات</h3>
+    <!-- الخدمات -->
 
-            <p>
-                متابعة الإعلانات الخاصة بالطلاب.
-            </p>
+    <section class="dashboard-section">
 
-            <a href="news.html" class="hero-button">
-                عرض الإعلانات
-            </a>
+        <h2>
+            ⚡ الخدمات الطلابية
+        </h2>
+
+
+        <div class="dashboard-services">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📅
+                </div>
+
+                <h3>
+                    الجدول الدراسي
+                </h3>
+
+                <p>
+                    الاطلاع على جدول المحاضرات
+                    والدروس.
+                </p>
+
+                <a
+                    href="schedule.html"
+                    class="service-link"
+                >
+                    عرض الجدول
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📝
+                </div>
+
+                <h3>
+                    الامتحانات
+                </h3>
+
+                <p>
+                    معرفة مواعيد الامتحانات
+                    والجداول المعلنة.
+                </p>
+
+                <a
+                    href="schedule.html"
+                    class="service-link"
+                >
+                    عرض الامتحانات
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📊
+                </div>
+
+                <h3>
+                    النتائج
+                </h3>
+
+                <p>
+                    الاطلاع على النتائج الأكاديمية
+                    عند نشرها رسمياً.
+                </p>
+
+                <a
+                    href="results.html"
+                    class="service-link"
+                >
+                    عرض النتائج
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📚
+                </div>
+
+                <h3>
+                    البرامج الأكاديمية
+                </h3>
+
+                <p>
+                    التعرف على البرامج والمجالات
+                    الأكاديمية.
+                </p>
+
+                <a
+                    href="programs.html"
+                    class="service-link"
+                >
+                    عرض البرامج
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📢
+                </div>
+
+                <h3>
+                    الأخبار والإعلانات
+                </h3>
+
+                <p>
+                    متابعة آخر الأخبار والإعلانات
+                    الخاصة بالكلية.
+                </p>
+
+                <a
+                    href="news.html"
+                    class="service-link"
+                >
+                    عرض الإعلانات
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📞
+                </div>
+
+                <h3>
+                    التواصل
+                </h3>
+
+                <p>
+                    الوصول إلى معلومات التواصل
+                    مع الكلية.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="service-link"
+                >
+                    اتصل بنا
+                </a>
+
+            </div>
+
 
         </div>
 
+    </section>
 
-        <div class="card">
 
-            <div class="card-icon">📞</div>
+    <!-- معلومات الطالب -->
 
-            <h3>التواصل</h3>
+    <section class="dashboard-section">
 
-            <p>
-                التواصل مع الكلية عند الحاجة.
-            </p>
+        <h2>
+            👤 معلومات الطالب
+        </h2>
 
-            <a href="contact.html" class="hero-button">
-                اتصل بنا
-            </a>
+        <div class="info-list">
+
+            <div class="info-item">
+                <strong>الاسم:</strong>
+                سيتم عرض الاسم عند ربط النظام.
+            </div>
+
+            <div class="info-item">
+                <strong>الرقم الجامعي:</strong>
+                سيتم عرضه عند ربط النظام.
+            </div>
+
+            <div class="info-item">
+                <strong>المستوى الدراسي:</strong>
+                سيتم تحديده من النظام الأكاديمي.
+            </div>
+
+            <div class="info-item">
+                <strong>التخصص:</strong>
+                علوم الحاسوب وتقانة المعلومات.
+            </div>
 
         </div>
 
-
-    </div>
-
-</section>
+    </section>
 
 
-<section class="about">
+    <!-- تنبيه -->
 
-    <h2>🔐 تنبيه أمني</h2>
+    <section class="dashboard-section">
 
-    <p>
-        هذه الصفحة واجهة إلكترونية للموقع.
-        لا يتم تخزين كلمات المرور أو بيانات
-        الدخول داخل ملفات HTML.
-    </p>
+        <div class="notice">
 
-    <p>
-        عند ربط الموقع بخادم وقاعدة بيانات،
-        سيتم تطبيق نظام تسجيل دخول آمن
-        وحماية مناسبة للبيانات.
-    </p>
+            <strong>
+                🔐 ملاحظة أمنية:
+            </strong>
 
-</section>
+            <p>
+                هذه لوحة إلكترونية تجريبية للموقع.
+                لا يتم تخزين كلمات المرور أو البيانات
+                الشخصية داخل ملفات الموقع.
+            </p>
+
+            <p>
+                عند ربطها بنظام جامعي حقيقي، يجب استخدام
+                خادم وقاعدة بيانات ونظام تسجيل دخول آمن.
+            </p>
+
+        </div>
+
+    </section>
 
 
-<section class="about">
+    <section class="dashboard-section">
 
-    <a href="students.html" class="hero-button">
-        ⬅ العودة إلى خدمات الطلاب
-    </a>
+        <a
+            href="index.html"
+            class="hero-button"
+        >
+            🏠 العودة إلى الرئيسية
+        </a>
 
-    <br><br>
+    </section>
 
-    <a href="index.html" class="hero-button">
-        🏠 العودة إلى الرئيسية
-    </a>
 
-</section>
+</div>
 
 
 </main>
@@ -234,6 +664,7 @@
 
 </footer>
 
+
 </body>
 
-</html>
+        </html>
