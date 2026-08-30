@@ -10,77 +10,146 @@
     <title>الأخبار والإعلانات | كلية علوم الحاسوب وتقانة المعلومات</title>
 
     <meta name="description"
-          content="آخر أخبار وإعلانات كلية علوم الحاسوب وتقانة المعلومات بجامعة القرآن الكريم وتأصيل العلوم.">
+          content="الأخبار والإعلانات الخاصة بكلية علوم الحاسوب وتقانة المعلومات.">
 
     <link rel="stylesheet" href="style.css">
 
     <style>
 
-        .page-header {
+        .news-page {
+            background: #f4f7f6;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        .news-hero {
             background: linear-gradient(135deg, #064e3b, #0f766e);
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 50px 20px;
         }
 
-        .page-header h1 {
+        .news-hero h1 {
             margin: 0 0 10px;
             font-size: 34px;
         }
 
-        .page-header p {
+        .news-hero p {
             margin: 0;
             font-size: 17px;
+            opacity: 0.9;
         }
 
         .news-container {
             width: min(1000px, 92%);
-            margin: 35px auto;
+            margin: 30px auto;
         }
 
         .news-card {
             background: white;
-            border-radius: 16px;
+            border-radius: 18px;
             padding: 25px;
-            margin-bottom: 22px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
             border-right: 5px solid #0f766e;
+            transition: 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+        }
+
+        .news-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .news-type {
+            background: #e6fffa;
+            color: #064e3b;
+            padding: 6px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
         }
 
         .news-date {
-            display: inline-block;
-            background: #e6fffa;
-            color: #064e3b;
-            padding: 6px 12px;
-            border-radius: 20px;
+            color: #777;
             font-size: 13px;
-            margin-bottom: 12px;
         }
 
         .news-card h2 {
             color: #064e3b;
-            margin: 5px 0 12px;
             font-size: 22px;
+            margin: 8px 0 12px;
         }
 
         .news-card p {
             color: #555;
-            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .important {
+            border-right-color: #b45309;
+        }
+
+        .important .news-type {
+            background: #fff7ed;
+            color: #9a3412;
+        }
+
+        .student-news {
+            border-right-color: #2563eb;
+        }
+
+        .student-news .news-type {
+            background: #eff6ff;
+            color: #1d4ed8;
+        }
+
+        .news-empty {
+            background: white;
+            text-align: center;
+            padding: 35px 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            margin-top: 25px;
+        }
+
+        .news-empty .icon {
+            font-size: 45px;
+        }
+
+        .news-empty h2 {
+            color: #064e3b;
+        }
+
+        .news-empty p {
+            color: #666;
         }
 
         .back-home {
             text-align: center;
-            margin: 35px 0;
+            margin-top: 35px;
         }
 
         @media (max-width: 600px) {
 
-            .page-header {
-                padding: 30px 15px;
+            .news-hero {
+                padding: 35px 15px;
             }
 
-            .page-header h1 {
-                font-size: 25px;
+            .news-hero h1 {
+                font-size: 26px;
+            }
+
+            .news-hero p {
+                font-size: 15px;
             }
 
             .news-container {
@@ -89,6 +158,11 @@
 
             .news-card {
                 padding: 20px 15px;
+            }
+
+            .news-top {
+                align-items: flex-start;
+                flex-direction: column;
             }
 
             .news-card h2 {
@@ -109,19 +183,25 @@
 
     <div class="logos">
 
-        <img src="university-logo.png"
-             alt="شعار جامعة القرآن الكريم وتأصيل العلوم"
-             class="university-logo">
+        <img
+            src="university-logo.png"
+            alt="شعار جامعة القرآن الكريم وتأصيل العلوم"
+            class="university-logo"
+        >
 
-        <img src="college-logo.png"
-             alt="شعار كلية علوم الحاسوب وتقانة المعلومات"
-             class="college-logo">
+        <img
+            src="college-logo.png"
+            alt="شعار كلية علوم الحاسوب وتقانة المعلومات"
+            class="college-logo"
+        >
 
     </div>
+
 
     <h1>
         جامعة القرآن الكريم وتأصيل العلوم
     </h1>
+
 
     <h2>
         كلية علوم الحاسوب وتقانة المعلومات
@@ -151,98 +231,161 @@
 </nav>
 
 
-<section class="page-header">
+<main class="news-page">
+
+
+<section class="news-hero">
 
     <h1>
         📰 الأخبار والإعلانات
     </h1>
 
     <p>
-        آخر الأخبار والإعلانات الخاصة بالكلية والطلاب
+        تابع آخر أخبار وإعلانات الكلية والطلاب
     </p>
 
 </section>
 
 
-<main class="news-container">
+<section class="news-container">
 
+
+    <!-- إعلان ترحيبي -->
 
     <article class="news-card">
 
-        <span class="news-date">
-            📅 إعلان
-        </span>
+        <div class="news-top">
+
+            <span class="news-type">
+                📢 إعلان
+            </span>
+
+            <span class="news-date">
+                2026
+            </span>
+
+        </div>
+
 
         <h2>
             مرحباً بكم في الموقع الإلكتروني للكلية
         </h2>
 
+
         <p>
             ترحب كلية علوم الحاسوب وتقانة المعلومات
             بجميع الطلاب والزوار في موقعها الإلكتروني.
-            سيتم نشر الأخبار والإعلانات الرسمية هنا
-            بصورة مستمرة.
+            سيتم استخدام هذه الصفحة لنشر الأخبار
+            والإعلانات الرسمية الخاصة بالكلية.
         </p>
 
     </article>
 
 
-    <article class="news-card">
+    <!-- إعلان مهم -->
 
-        <span class="news-date">
-            📢 مهم
-        </span>
+    <article class="news-card important">
+
+        <div class="news-top">
+
+            <span class="news-type">
+                🔔 مهم
+            </span>
+
+            <span class="news-date">
+                إعلان رسمي
+            </span>
+
+        </div>
+
 
         <h2>
             متابعة الإعلانات الأكاديمية
         </h2>
 
+
         <p>
-            يرجى من جميع الطلاب متابعة هذه الصفحة
-            بصورة مستمرة لمعرفة الإعلانات المتعلقة
-            بالمحاضرات والجداول والامتحانات والأنشطة
-            الأكاديمية.
+            يرجى من الطلاب متابعة صفحة الأخبار
+            والإعلانات بصورة مستمرة لمعرفة آخر
+            المستجدات المتعلقة بالدراسة والجداول
+            والامتحانات والأنشطة الأكاديمية.
         </p>
 
     </article>
 
 
-    <article class="news-card">
+    <!-- إعلان للطلاب -->
 
-        <span class="news-date">
-            🎓 للطلاب
-        </span>
+    <article class="news-card student-news">
+
+        <div class="news-top">
+
+            <span class="news-type">
+                🎓 للطلاب
+            </span>
+
+            <span class="news-date">
+                خدمات إلكترونية
+            </span>
+
+        </div>
+
 
         <h2>
-            الخدمات الإلكترونية للطلاب
+            بوابة الطالب الإلكترونية
         </h2>
 
+
         <p>
-            يمكن للطلاب الوصول إلى الخدمات الإلكترونية
-            والجداول والنتائج والمعلومات الأكاديمية
-            من خلال بوابة الطلاب.
+            يمكن للطلاب الوصول إلى الخدمات الطلابية
+            مثل الجداول والنتائج والبرامج الأكاديمية
+            ومعلومات التواصل من خلال لوحة الطالب.
         </p>
 
-        <a href="student-dashboard.html"
-           class="hero-button">
 
-            بوابة الطالب
-
+        <a
+            href="students.html"
+            class="hero-button"
+        >
+            🎓 الدخول إلى لوحة الطالب
         </a>
 
     </article>
+
+
+    <!-- مكان الأخبار القادمة -->
+
+    <div class="news-empty">
+
+        <div class="icon">
+            📢
+        </div>
+
+        <h2>
+            أخبار وإعلانات قادمة
+        </h2>
+
+        <p>
+            سيتم نشر الأخبار والإعلانات الجديدة هنا
+            عند توفر البيانات الرسمية.
+        </p>
+
+    </div>
 
 
     <div class="back-home">
 
-        <a href="index.html"
-           class="hero-button">
-
+        <a
+            href="index.html"
+            class="hero-button"
+        >
             🏠 العودة إلى الرئيسية
-
         </a>
 
     </div>
+
+
+</section>
 
 
 </main>
@@ -267,4 +410,4 @@
 
 </body>
 
-</html>
+                                          </html>
