@@ -1,225 +1,392 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>الجداول الدراسية</title>
+    <title>جدول امتحانات الدفعة 31 و32 | كلية علوم الحاسوب وتقانة المعلومات</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="جدول امتحانات الدور الأول للفصل الدراسي الثاني للدفعة 31 و32 بكلية علوم الحاسوب وتقانة المعلومات">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f4f7f5;
+            color: #222;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #063b2b, #0b6045);
+            color: white;
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .logos img {
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        header h1 {
+            margin: 5px 0;
+            font-size: 26px;
+        }
+
+        header h2 {
+            margin: 5px 0;
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        nav {
+            background: white;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #063b2b;
+            font-weight: bold;
+            margin: 5px 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #063b2b;
+            color: white;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1100px;
+            margin: 35px auto;
+        }
+
+        .title-box {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .title-box h2 {
+            color: #063b2b;
+            margin: 5px 0 10px;
+        }
+
+        .title-box p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .notice {
+            background: #fff8df;
+            border-right: 5px solid #d4af37;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table-box {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        th {
+            background: #063b2b;
+            color: white;
+            padding: 14px 10px;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 13px 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f6f3;
+        }
+
+        tr:hover {
+            background: #e7f0eb;
+        }
+
+        .date {
+            white-space: nowrap;
+        }
+
+        .time {
+            color: #8a6800;
+            white-space: nowrap;
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            background: #063b2b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            background: #0b6045;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #063b2b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 4px solid #d4af37;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 21px;
+            }
+
+            header h2 {
+                font-size: 16px;
+            }
+
+            .logos img {
+                width: 75px;
+                height: 75px;
+            }
+
+            .container {
+                width: 97%;
+            }
+
+            .title-box {
+                padding: 18px 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">🎓</div>
+    <div class="logos">
+        <img src="university-logo.png" alt="شعار جامعة القرآن الكريم وتأصيل العلوم">
+        <img src="college-logo.png" alt="شعار كلية علوم الحاسوب وتقانة المعلومات">
+    </div>
 
     <h1>جامعة القرآن الكريم وتأصيل العلوم</h1>
-
     <h2>كلية علوم الحاسوب وتقانة المعلومات</h2>
 
 </header>
 
-
 <nav>
-
     <a href="index.html">الرئيسية</a>
     <a href="about.html">عن الكلية</a>
     <a href="departments.html">الأقسام</a>
-    <a href="programs.html">البرامج الأكاديمية</a>
-    <a href="teachers.html">أعضاء هيئة التدريس</a>
+    <a href="programs.html">البرامج</a>
+    <a href="teachers.html">هيئة التدريس</a>
     <a href="students.html">الطلاب</a>
-    <a href="news.html">الأخبار والإعلانات</a>
-    <a href="contact.html">اتصل بنا</a>
-
+    <a href="news.html">الأخبار</a>
+    <a href="contact.html">تواصل معنا</a>
 </nav>
-
 
 <main class="container">
 
+    <section class="title-box">
+        <h2>📅 جدول امتحانات الدور الأول</h2>
 
-<section class="about">
+        <p>
+            الفصل الدراسي الثاني – الدفعة (31–32)
+        </p>
 
-    <h2>الجداول الدراسية</h2>
+        <p>
+            للعام الجامعي 1447/1446هـ – 2025/2026م
+        </p>
+    </section>
 
-    <p>
-        من خلال هذه الصفحة يمكن للطلاب الاطلاع على
-        الجداول الدراسية والمحاضرات.
-    </p>
+    <div class="notice">
+        🕚 تبدأ جميع جلسات الامتحانات الساعة 11:30 صباحاً
+    </div>
 
-</section>
+    <section class="table-box">
 
+        <table>
 
-<section class="departments">
+            <thead>
+                <tr>
+                    <th>اليوم</th>
+                    <th>التاريخ</th>
+                    <th>مقررات علوم الحاسوب</th>
+                    <th>مقررات تقانة المعلومات</th>
+                    <th>الزمن</th>
+                </tr>
+            </thead>
 
-    <h2>جدول المحاضرات</h2>
+            <tbody>
 
-    <div style="overflow-x:auto;">
+                <tr>
+                    <td>الخميس</td>
+                    <td class="date">3/9/2026م</td>
+                    <td>القرآن الكريم التحريري (2)</td>
+                    <td>القرآن الكريم التحريري (2)</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-        <table style="
-            width:100%;
-            border-collapse:collapse;
-            text-align:center;
-            background:white;
-        ">
+                <tr>
+                    <td>الأحد</td>
+                    <td class="date">6/9/2026م</td>
+                    <td>الرياضيات المتقطعة</td>
+                    <td>الرياضيات المتقطعة</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-            <tr style="
-                background:#063b2b;
-                color:white;
-            ">
+                <tr>
+                    <td>الثلاثاء</td>
+                    <td class="date">8/9/2026م</td>
+                    <td>فقه العبادات (2)</td>
+                    <td>فقه العبادات (2)</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-                <th style="padding:15px;">اليوم</th>
-                <th style="padding:15px;">المادة</th>
-                <th style="padding:15px;">الوقت</th>
-                <th style="padding:15px;">القاعة</th>
+                <tr>
+                    <td>الخميس</td>
+                    <td class="date">10/9/2026م</td>
+                    <td>مدخل التفسير</td>
+                    <td>مدخل التفسير</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-            </tr>
+                <tr>
+                    <td>الأحد</td>
+                    <td class="date">13/9/2026م</td>
+                    <td>أساسيات الخوارزميات والبرمجة الهيكلية</td>
+                    <td>أساسيات الخوارزميات والبرمجة الهيكلية</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
+                <tr>
+                    <td>الإثنين</td>
+                    <td class="date">14/9/2026م</td>
+                    <td>اللغة الإنجليزية (2)</td>
+                    <td>اللغة الإنجليزية (2)</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-            <tr>
+                <tr>
+                    <td>الثلاثاء</td>
+                    <td class="date">15/9/2026م</td>
+                    <td>التجويد (2)</td>
+                    <td>التجويد (2)</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-                <td style="padding:15px;">
-                    الأحد
-                </td>
+                <tr>
+                    <td>الخميس</td>
+                    <td class="date">17/9/2026م</td>
+                    <td>العقيدة والمذاهب الفكرية</td>
+                    <td>العقيدة والمذاهب الفكرية</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-                <td style="padding:15px;">
-                    البرمجة
-                </td>
+                <tr>
+                    <td>الأحد</td>
+                    <td class="date">20/9/2026م</td>
+                    <td>حسبان (1)</td>
+                    <td>حسبان (1)</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-                <td style="padding:15px;">
-                    8:00 - 10:00
-                </td>
+                <tr>
+                    <td>الثلاثاء</td>
+                    <td class="date">22/9/2026م</td>
+                    <td>اللغة العربية (المهارات اللغوية)</td>
+                    <td>اللغة العربية (المهارات اللغوية)</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-                <td style="padding:15px;">
-                    قاعة 1
-                </td>
+                <tr>
+                    <td>الخميس</td>
+                    <td class="date">24/9/2026م</td>
+                    <td>الدراسات السودانية</td>
+                    <td>الدراسات السودانية</td>
+                    <td class="time">11:30 صباحاً</td>
+                </tr>
 
-            </tr>
-
-
-            <tr style="background:#f5f7f9;">
-
-                <td style="padding:15px;">
-                    الإثنين
-                </td>
-
-                <td style="padding:15px;">
-                    الرياضيات
-                </td>
-
-                <td style="padding:15px;">
-                    10:00 - 12:00
-                </td>
-
-                <td style="padding:15px;">
-                    قاعة 2
-                </td>
-
-            </tr>
-
-
-            <tr>
-
-                <td style="padding:15px;">
-                    الثلاثاء
-                </td>
-
-                <td style="padding:15px;">
-                    نظم التشغيل
-                </td>
-
-                <td style="padding:15px;">
-                    8:00 - 10:00
-                </td>
-
-                <td style="padding:15px;">
-                    معمل الحاسوب
-                </td>
-
-            </tr>
-
-
-            <tr style="background:#f5f7f9;">
-
-                <td style="padding:15px;">
-                    الأربعاء
-                </td>
-
-                <td style="padding:15px;">
-                    قواعد البيانات
-                </td>
-
-                <td style="padding:15px;">
-                    10:00 - 12:00
-                </td>
-
-                <td style="padding:15px;">
-                    معمل الحاسوب
-                </td>
-
-            </tr>
-
-
-            <tr>
-
-                <td style="padding:15px;">
-                    الخميس
-                </td>
-
-                <td style="padding:15px;">
-                    اللغة الإنجليزية
-                </td>
-
-                <td style="padding:15px;">
-                    8:00 - 10:00
-                </td>
-
-                <td style="padding:15px;">
-                    قاعة 3
-                </td>
-
-            </tr>
+            </tbody>
 
         </table>
 
+    </section>
+
+    <div class="footer-note">
+        <strong>📌 تنبيه:</strong>
+        يرجى متابعة إعلانات الكلية لأي تعديل أو تحديث يطرأ على جدول الامتحانات.
+        <br>
+
+        <a class="back" href="index.html">🏠 العودة إلى الصفحة الرئيسية</a>
     </div>
-
-</section>
-
-
-<section class="about">
-
-    <h2>تنبيه</h2>
-
-    <p>
-        الجدول الموجود حالياً تجريبي لغرض تصميم الموقع،
-        وسيتم استبداله بالجدول الرسمي للكلية عند توفره.
-    </p>
-
-</section>
-
 
 </main>
 
-
 <footer>
-
-    <h3>
-        كلية علوم الحاسوب وتقانة المعلومات
-    </h3>
-
-    <p>
-        جامعة القرآن الكريم وتأصيل العلوم
-    </p>
-
-    <p>
-        جميع الحقوق محفوظة © 2026
-    </p>
-
+    <p>كلية علوم الحاسوب وتقانة المعلومات</p>
+    <p>جامعة القرآن الكريم وتأصيل العلوم</p>
+    <p>© 2026 جميع الحقوق محفوظة</p>
 </footer>
 
 </body>
-
-</html>
+    </html>
